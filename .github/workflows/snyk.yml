@@ -29,7 +29,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: test
-          args: --severity-threshold=high
+          args: --file=tienda-tech-backend/package.json --severity-threshold=high
         continue-on-error: false
 
       - name: Block deployment on vulnerability
